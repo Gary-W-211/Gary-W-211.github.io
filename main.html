@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gary's Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    nav a {
+      margin-right: 15px;
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+    section {
+      display: none;
+      margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a data-section="home">主页</a>
+    <a data-section="about">个人简介</a>
+    <a data-section="projects">项目</a>
+  </nav>
+
+  <section id="home" class="active">
+    <h1>欢迎来到我的个人网站</h1>
+    <p>这是主页内容。</p>
+  </section>
+
+  <section id="about">
+    <h1>个人简介</h1>
+    <p>这里写你的个人介绍。</p>
+  </section>
+
+  <section id="projects">
+    <h1>我的项目</h1>
+    <p>这里列出你的项目，可以加超链接：</p>
+    <ul>
+      <li><a href="https://github.com/Gary-W-211" target="_blank">GitHub 主页</a></li>
+      <li><a href="https://example.com" target="_blank">项目示例网站</a></li>
+    </ul>
+  </section>
+
+  <script>
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const target = link.getAttribute('data-section');
+        sections.forEach(sec => {
+          sec.classList.toggle('active', sec.id === target);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
