@@ -19,9 +19,9 @@
     </div>
     <div class="links">
       <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
-      <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">About</a></div>
-      <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Projects</a></div>
-      <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Contact</a></div>
+      <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#resume">Resume</a></div>
+      <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#projects">Projects</a></div>
+      <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#contact">Contact</a></div>
     </div>
     <!-- <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i> -->
     <i class="fa-solid fa-bars  hamburg"></i>
@@ -29,9 +29,9 @@
   <div class="dropdown">
     <div class="links">
       <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
       <!-- <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i> -->
       <i class="fa-solid fa-xmark cancel"></i>
     </div>
@@ -61,29 +61,30 @@
       <div class="social-links" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
       </div>
-      <div class="buttons" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1600">
-        <button>Hire me</button>
-      </div>
+      <!-- <div class="buttons" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1600">
+        <button>Download CV</button>
+      </div> -->
     </div>
 </section>
 
-<!-- About Section-->
-<section class="about" id="about">
+<!-- Resume Section-->
+<section class="resume" id="resume">
   <div class="content">
-    <div class="title" data-aos="fade-up" data-aos-duration="1500"><span>About Me</span></div>
-    <div class="about-details">
-     <div class="left" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
-      <img src="assets/images/Me_1.jpg" alt="portrait" />
-     </div>
-     <div class="right">
-      <div class="topic" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">Designing is</div>
-      <p data-aos="fade-down" data-aos-duration="1500" data-aos-delay="300">
-        abaaba
-      </p>
-      <div class="buttons">
-        <button>Download CV</button>
-      </div>
-     </div>
+    <div class="title" data-aos="fade-up" data-aos-duration="1500">
+      <span>Resume</span>
+    </div>
+    
+    <div class="pdf-container">
+      <iframe
+        src="assets/cv/Gary_Wang_CV.pdf"
+        type="application/pdf"
+        frameborder="0"
+        scrolling="auto">
+      </iframe>
+    </div>
+
+    <div class="buttons" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300">
+      <button>Download CV</button>
     </div>
   </div>
 </section>
@@ -151,7 +152,7 @@
     <div class="text">
       <div class="topic">Have any questions?</div>
       <p>If you have any questions or just want to say hi, feel free to reach out!</p>
-      <div class="button">
+      <div class="buttons">
         <button>Let's Chat</button>
       </div>
     </div>
