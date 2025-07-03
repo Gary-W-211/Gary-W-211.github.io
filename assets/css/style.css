@@ -38,31 +38,41 @@ nav{
     height: 10vh;
     }
 .nav-container{
-    wodth: 100%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /* position: relative; */
 }
 .logo{
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 .logo span{
     color: rgb(11, 202, 40);
     text-shadow: 0 0 20px rgb(11, 202, 40);
 }
-.hamburg,
-.cancel{
+.hamburg{
     position: absolute;
     color: white;
-    right: 15pc;
-    top:10px;
+    right: 30px;
+    top: 23px;
     opacity: 0;
     cursor: pointer;
     pointer-events: none;
     font-size:clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+.cancel{
+    position: absolute;
+    color: white;
+    right: 0px;
+    top: -10px;
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    font-size:clamp(2rem, 0.5rem + 5vw, 3rem);
 }
 .nav-container .links{
     display: flex;
@@ -121,7 +131,7 @@ nav{
   opacity: 1;                  
 }
 
-.dropdown{
+/* .dropdown{
     z-index: 100;
     position: absolute;
     top: 0;
@@ -131,6 +141,28 @@ nav{
     backdrop-filter: blur(4px) brightness(40%);
     box-shadow: 0 0 20px black;
     transition: 0.2s linear;
+} */
+
+.dropdown{
+  z-index: 100;
+  position: absolute;
+  top: 20px;            
+  right: 15px;         
+  width: 240px;       
+  transform: translateY(-120%);  
+  backdrop-filter: blur(8px) brightness(80%);
+  box-shadow: 0 6px 18px rgba(0,0,0,.6);
+  border-radius: 12px;
+  transition: .25s ease;
+}
+
+.dropdown.active {
+  transform: translateY(0);
+}
+
+.dropdown .links{
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown .links a{
@@ -138,7 +170,7 @@ nav{
     color: white;
     text-decoration: none;
     justify-content: center;
-    padding: 15px 0;
+    padding: 14px 0;
     align-items: center;
     transition: 0.2s linear;
 }
@@ -154,26 +186,24 @@ section{
 
 section .main-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-left: 100px;
     align-items: center;
 }
 .main-container .image{
-    width: 650px;
-    height: 70vh;
+    width: 600px;
+    height: 65vh;
     border-radius: 100%;
     overflow: hidden;
     box-shadow: 0 0 50px rgb(11, 202, 40);
 }
 
 .main-container .image img {
-  width: 120%;     
-  height: 120%;    
-  object-fit: contain; 
-  position: relative;
-  top: -160px;
-  left: -40px;
+    width: 100%;     
+    height: 100%;
+    object-fit: cover; 
 }
+
 
 .main-container .image:hover{
     animation: animate 1.5s ease-in-out infinite;
@@ -465,7 +495,39 @@ footer .text span a:hover{
     display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
+  /*home*/
+  section .main-container {
+    flex-direction: column;
+    display:flex;
+    padding-left: 0;       
+    align-items: center;      
+    gap: 20px;                
+  }
+  .main-container .image {
+    width: 600px;              
+    height: 65vh;              
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 0 auto;          
+    box-shadow: 0 0 30px rgb(11,202,40);
+  }
+  .main-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0; left: 0;         
+    position: static;        
+  }
+  .main-container .content {
+    width: 90%;               
+    text-align: center;
+  }
+  .main-container .buttons {
+    display: flex;
+    justify-content: center;
+  }
+    /*about*/
     .about .about-details{
         flex-direction: column;
         justify-content: center;
@@ -479,36 +541,35 @@ footer .text span a:hover{
         width: 90%;
         margin: 40px 0;
     }
+    /*projects*/
     .projects .project-list .project-item{
         margin: 20px 0;
         width: calc(100% / 2 - 20px);
     }
 }
-@media (max-width: 900px) {
-    .about .left img{
-        width: 350px;
-        height: 350px;
-    }
-}
 @media (max-width: 968px) {
-    nav.logo{
+    nav .logo{
         position: absolute;
-        top: 16px;
-        left: 15px;
-        font-size: 1.5rem;
+        top: 10px;
+        left: 30px;
+        font-size: 3rem;
     }
-    section. .main-container{
+    section .main-container{
         padding-left: 0px;
-        display:flex;
+        display: flex;
         flex-direction: column;
     }
     .nav-container .links{
         display: none;
     }
-    .hamburg,
+
+    .hamburg{
+      opacity:1;            
+      pointer-events:auto;
+    }
     .cancel{
-        opacity: 1;
-        pointer-events: visible;
+      opacity:0;          
+      pointer-events:none;
     }
     .main-container .content{
         margin-top: 20px;
@@ -522,7 +583,7 @@ footer .text span a:hover{
     .main-container .image{
         z-index:-1;
         width: 50%;
-        height: 60%;
+        height: 60vw;
     }
     .projects .project-list .project-item{
         width: 100%;
@@ -532,11 +593,16 @@ footer .text span a:hover{
         width: 100%;
     }
 }
-
+@media (max-width: 900px) {
+    .about .left img{
+        width: 350px;
+        height: 350px;
+    }
+}
 @media (max-width: 500px) {
-    main-container .image{
-        width: 50%;
-        height: 60%;
+    .main-container .image{
+        width: 60vw;
+        height: 60vw;
         margin-bottom: 0px;
     }
     .main-container .content{
