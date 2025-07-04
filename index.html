@@ -20,7 +20,7 @@
     <div class="links">
       <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
       <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#resume">Resume</a></div>
-      <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#projects">Projects</a></div>
+      <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#portfolio">Portfolio</a></div>
       <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#contact">Contact</a></div>
     </div>
     <!-- <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i> -->
@@ -30,7 +30,7 @@
     <div class="links">
       <a href="#">Home</a>
       <a href="#resume">Resume</a>
-      <a href="#projects">Projects</a>
+      <a href="#portfolio">Portfolio</a>
       <a href="#contact">Contact</a>
       <!-- <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i> -->
       <i class="fa-solid fa-xmark cancel"></i>
@@ -67,8 +67,6 @@
     </div>
 </section>
 
-
-
 <!-- Resume Section-->
 <!-- former part-->
 <!-- <section class="resume" id="resume">
@@ -97,9 +95,11 @@
       <h2>Why Me?</h2>
       <p class="desc">Specializing in autonomous UAV control, embedded systems, SLAM navigation and robotics control & design, I have an unwavering passion for advancing the field of robotics through continuous innovation and exploration.
 SKILLS</p>
-      <button class="resume-btn active">Experience</button>
-      <button class="resume-btn">Education</button>
-      <button class="resume-btn">Skills</button>
+      <div class="buttons">
+        <button class="resume-btn active">Experience</button>
+        <button class="resume-btn">Education</button>
+        <button class="resume-btn">Skills</button>
+      </div>
     </div>
 
     <div class="resume-box">
@@ -196,7 +196,7 @@ SKILLS</p>
 </section>
 
 <!-- Portfolio Section -->
-<section class="portfolio active" id="portfolio">
+<section class="portfolio" id="portfolio">
   <h2 class="heading"><span>Projects</span></h2>
   <div class="portfolio-container">
     <div class="portfolio-box">
@@ -210,7 +210,6 @@ SKILLS</p>
         <div class="github">
           <a href="#"><i class="fa-brands fa-github"></i><span>Github Repository</span></a>
         </div>
-
 
       </div>
 
@@ -239,8 +238,10 @@ SKILLS</p>
         </div>
       </div>
       <div class="navigation">
-        <button class="arrow-left disabled"><i class="fas fa-chevron-left"></i></button>
-        <button class="arrow-right"><i class="fas fa-chevron-right"></i></button>
+        <div class="buttons">
+          <button class="arrow-left disabled"><i class="fas fa-chevron-left"></i></button>
+          <button class="arrow-right"><i class="fas fa-chevron-right"></i></button>
+        </div>
       </div>
 
     </div>
@@ -249,7 +250,7 @@ SKILLS</p>
 </section>
 
 <!-- Projects Section -->
-<section class="projects" id="projects">
+<!-- <section class="projects" id="projects">
   <div class="content">
     <div class="title"><span>Projects</span></div>
     <div class="project-list">
@@ -302,18 +303,53 @@ SKILLS</p>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Contact Me-->
 <section class="contact" id="contact">
-  <div class="content">
-    <div class="title"><span>Contact Me</span></div>
-    <div class="text">
-      <div class="topic">Have any questions?</div>
-      <p>If you have any questions or just want to say hi, feel free to reach out!</p>
-      <div class="buttons">
-        <button>Let's Chat</button>
+  <div class="contact-container">
+    <div class="contact-box">
+      <h2>Let's Work Together</h2>
+      <div class="contact-detail">
+        <i class="fas fa-phone"></i>
+        <div class="detail">
+          <p>Phone</p>
+          <p>+1 (510) 684-6080</p>
+        </div>
       </div>
+
+      <div class="contact-detail">
+        <i class="fas fa-envelope"></i>
+        <div class="detail">
+          <p>Email</p>
+          <p>gailywvls@berkeley.edu</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <i class="fas fa-map-marked-alt"></i>
+        <div class="detail">
+          <p>Address</p>
+          <p>2116 Allston Way, Berkeley, CA, 94704</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <form action="">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <div class="field-box">
+          <input type="text" placeholder="Full Name" required>
+          <input type="text" placeholder="Email Address" required>
+          <input type="text" placeholder="Phone Number" required>
+          <input type="text" placeholder="Email Subject" required>
+          <textarea name="" id="" placeholder="Your Message" required></textarea>
+    
+        </div>
+        <div class="buttons">
+        <button>Send Message</button>
+        </div>
+      </form>
     </div>
 </section>
 
