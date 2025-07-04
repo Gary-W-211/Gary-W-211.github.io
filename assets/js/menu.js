@@ -17,3 +17,9 @@ export function closeMenu() {
   cancel.style.opacity = "0";
   cancel.style.pointerEvents = "none";
 }
+
+document
+  .querySelectorAll(".dropdown .links a")
+  .forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });

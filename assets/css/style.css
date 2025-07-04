@@ -41,8 +41,9 @@ nav{
     top: 0;
     left: 0;
     z-index: 999;
-    background: rgba(0,0,0,.6);
-    backdrop-filter: blur(6px);
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 .nav-container{
     width: 100%;
@@ -74,8 +75,8 @@ nav{
 .cancel{
     position: absolute;
     color: white;
-    right: 0px;
-    top: -10px;
+    right: 15px;
+    top: 10px;
     opacity: 0;
     cursor: pointer;
     pointer-events: none;
@@ -138,29 +139,22 @@ nav{
   opacity: 1;                  
 }
 
-/* .dropdown{
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    transform: translateY(-500px);
-    width: 100%;
-    height: auto;
-    backdrop-filter: blur(4px) brightness(40%);
-    box-shadow: 0 0 20px black;
-    transition: 0.2s linear;
-} */
-
 .dropdown{
-  z-index: 100;
   position: absolute;
   top: 20px;            
   right: 15px;         
   width: 240px;       
   transform: translateY(-120%);  
-  backdrop-filter: blur(8px) brightness(80%);
+  background: rgba(0, 0, 0, 0.7);
+
+  /* Safari */
+  -webkit-backdrop-filter: blur(100px) brightness(20%);
+  /* Chrome/Edge/Firefox */
+  backdrop-filter:        blur(100px) brightness(20%);
   box-shadow: 0 6px 18px rgba(0,0,0,.6);
+
   border-radius: 12px;
-  transition: .25s ease;
+  transition: all 0.25s ease;
 }
 
 .dropdown.active {
@@ -315,55 +309,65 @@ section .main-container{
 }
 
 /* resume section styling */
-/* section .content{
-    width: 80%;
-    margin: 0px auto;
-    font-family: 'Poppins', sans-serif;
-} */
-
-.resume .buttons{
-  display:flex;
-  justify-content:center; 
-}
-
-.resume .buttons button{
-  width:auto;               
-  height:auto;            
-  padding:8px 16px;        
-  margin:16px auto 0;     
-  background:rgb(11,202,40);
-  color:#fff;
-  font-size:120%;
-  font-weight:700;
-  border:2px solid transparent;
-  border-radius:4px;
-  transition:all .4s ease;
-}
-
-.resume .content{
-  width: 100%;              
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  padding: 40px 0;
-}
-
-.resume .pdf-container{
-  width: 90%;               
-  max-width: 800px;         
-  height: 600px;              
+.resume .content {
+  width: 80%;                        
   margin: 0 auto;             
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,.5);
+  padding: 40px 0;      
+
+  display: flex;
+  flex-direction: column;        
+  align-items: center;      
+  gap: 40px;                  
+
+  font-family: 'Poppins', sans-serif;
 }
 
-.resume .pdf-container iframe{
+.resume .pdf-container {
+  width: 100%;  
+  max-width: 1100px;                
+  aspect-ratio: 8.5 / 11;
+  overflow: hidden;              
+  border-radius: 8px;        
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); 
+}
+
+.resume .pdf-container iframe {
   width: 100%;
   height: 100%;
-  border: none;
+  border: none;                
+}
+.resume .buttons {
+  display: flex;
+  justify-content: center;      
+}
+
+.resume .buttons button {
+  padding: 8px 16px;         
+  margin-top: 16px;       
+
+  background: rgb(11, 202, 40);  
+  color: #fff;                
+
+  font-size: 1.2rem;         
+  font-weight: 700;
+
+  border: 2px solid transparent; 
+  border-radius: 4px;
+
+  transition: all 0.4s ease;  
+}
+
+.resume .buttons button:hover {
+  background: transparent;
+  color: rgb(11, 202, 40);
+  border-color: rgb(11, 202, 40);
+  box-shadow: 0 0 20px rgb(11, 202, 40);
+  transform: scale(1.05);
+}
+section .content{
+    width: 100%;
+    margin: 0px auto;
+    font-family: 'Poppins', sans-serif;
 }
 
 section .title{
@@ -449,7 +453,7 @@ section .buttons button:hover{
     border-radius: 12px;
     padding: 30px 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-    cursor default;
+    cursor: default;
     color: white;
     transition: all 0.4s ease;
 }
@@ -558,6 +562,14 @@ footer .text span a:hover{
     .resume .buttons{
         display: flex;
         justify-content: center;
+    }
+   .resume .pdf-container {
+        width: 90%;  
+        max-width: 1000px;                
+        aspect-ratio: 8.5 / 11;
+        overflow: hidden;              
+        border-radius: 8px;        
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); 
     }
     /*projects*/
     .projects .project-list .project-item{
