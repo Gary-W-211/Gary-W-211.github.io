@@ -41,15 +41,15 @@ body{
 /*navbar styling*/
 nav{
     width: 100%;
-    height: 10vh;
+    height: 9vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
-    background: rgba(0,0,0,0.7);
-    /* backdrop-filter: blur(15px); */
+    background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(12px) brightness(40%);
-    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 0 20px black;
+    -webkit-backdrop-filter: blur(12px);
 }
 .nav-container{
     width: 100%;
@@ -290,7 +290,7 @@ section .main-container{
     border: 0.2rem solid rgb(11, 202, 40);
     border-radius: 50%;
     color: rgb(11, 202, 40);
-    margin: 5px 15px;
+    margin: 40px 30px 15px 0;
     font-size: 1.5rem;
     /* transition: 0.2s linear; */
     transition: 
@@ -313,10 +313,14 @@ section .main-container{
   transform: scale(1.2);
 }
 
+.content .buttons{
+    display: flex;
+    justify-content: flex-start;
+}
 .content button{
     width: 50%;
     height: 5vh;
-    margin: 30px;
+    margin: 22px;
     background-color: rgb(11, 202, 40);
     color: white;
     border: none;
@@ -335,6 +339,7 @@ section .main-container{
     font-weight: 700;
     box-shadow: 0 0 40px rgb(11, 202, 40);
 }
+
 
 /* resume section styling */
 .resume-container{
@@ -648,7 +653,15 @@ section .main-container{
     text-align: right;
     margin-top: 2rem;
 }
+
+.portfolio-box .navigation .buttons{
+    display: flex;              
+}
+
 .portfolio-box .navigation button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 3rem;
     height: 3rem;
     background: rgb(11, 202, 40);
@@ -666,7 +679,7 @@ section .main-container{
     color: black;
 }
 .portfolio-box .navigation .arrow-right{
-    margin-left: 1.5rem;
+    margin-left: 2rem;
 }
 
 section .content{
@@ -903,7 +916,7 @@ footer .text span a:hover{
 
 @media (max-width: 1200px) {
     html{
-        font-size: 90%;
+        font-size: 95%;
     }
 
     /* home */
@@ -932,7 +945,10 @@ footer .text span a:hover{
     width: 90%;               
     /* text-align: center; */
   }
-
+  .content .buttons{
+    display: flex;
+    justify-content: center;
+  }
   
     /*projects*/
     .projects .project-list .project-item{
@@ -1020,6 +1036,11 @@ footer .text span a:hover{
     }
 }
 @media (max-width: 672px){
+    /* .social-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    } */
     /* contact */
     .contact-box p{
         font-size: 1.2rem;
