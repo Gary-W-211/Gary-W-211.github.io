@@ -207,7 +207,7 @@ section{
     padding: 10rem 7% 2rem;
     width: 100%;
     /* min-height: 90vh; */
-    scroll-margin-top: -6vh;
+    scroll-margin-top: -9vh;
 }
 
 section .main-container{
@@ -219,8 +219,10 @@ section .main-container{
 
 }
 .main-container .image{
-    width: 600px;
-    height: 65vh;
+    /* width: 600px; */
+    width: min(600px, 80vw);
+    aspect-ratio: 1 / 1.1;
+    /* height: 65vh; */
     border-radius: 100%;
     overflow: hidden;
     box-shadow: 0 0 50px rgb(11, 202, 40);
@@ -667,8 +669,6 @@ section .main-container{
     margin-left: 1.5rem;
 }
 
-
-
 section .content{
     width: 100%;
     margin: 0px auto;
@@ -902,20 +902,20 @@ footer .text span a:hover{
 }
 
 @media (max-width: 1200px) {
-  /*home*/
-  html{
-    font-size: 90%;
-  }
-  section .main-container {
-    flex-direction: column;
-    display:flex;
-    padding-left: 0;       
-    align-items: center;      
-    gap: 20px;                
-  }
+    html{
+        font-size: 90%;
+    }
+
+    /* home */
+    section .main-container {
+        flex-direction: column;
+        display:flex;
+        padding-left: 0;       
+        gap: 20px;                
+    }
   .main-container .image {
-    width: 600px;              
-    height: 65vh;              
+    width: min(600px, 80vw);             
+    aspect-ratio: 1 / 1.1;        
     border-radius: 100%;
     overflow: hidden;
     margin: 0 auto;          
@@ -930,8 +930,10 @@ footer .text span a:hover{
   }
   .main-container .content {
     width: 90%;               
-    text-align: center;
+    /* text-align: center; */
   }
+
+  
     /*projects*/
     .projects .project-list .project-item{
         margin: 20px 0;
@@ -1004,7 +1006,7 @@ footer .text span a:hover{
     }
     .main-container .image{
         width: 70%;
-        height: 65vw;
+        aspect-ratio: 1 / 1.1;
     }
     .projects .project-list .project-item{
         width: 100%;
@@ -1067,12 +1069,6 @@ footer .text span a:hover{
     }
     .resume button{
         margin-top: 15px;
-    }
-    .resume-box h2,
-    .resume-box .heading,
-    .resume-box .desc,
-    .resume-detail.about .resume-item{
-        text-align: center;
     }
 
     .contact-box form{
