@@ -4,7 +4,7 @@
     padding:0;
     box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
-    text-decoration: none
+    text-decoration: none;
     scroll-behavior: smooth;
 }
 html{
@@ -745,7 +745,7 @@ section .buttons button:hover{
 }
 
 /* projects styling */
-.projects .project-list{
+/* .projects .project-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -787,7 +787,7 @@ section .buttons button:hover{
 .projects .project-list .project-item:hover .topic,
 .projects .project-list .project-item:hover p{
     color: white
-}
+} */
 
 /* contact styling */
 .contact-container{
@@ -827,7 +827,7 @@ section .buttons button:hover{
     color: rgb(11, 202, 40);
 }
 .contact-box form{
-    background: black; 
+    background: white; 
     max-width: 750px;
     margin: 0 auto;
     padding: 1rem 2rem 1rem;
@@ -955,11 +955,15 @@ footer .text span a:hover{
 @media (max-width: 978px) {
     section{
         padding: 4rem 7% 4rem;
+        scroll-margin-top: 3vh;
     }
-
+    
+    /* contact part */
     .contact-container{
         grid-template-columns: 1fr;
         justify-items: center;
+        gap: 1.5rem;
+        padding: 0 1rem;
     }
     .contact-box .field-box{
         grid-template-columns: repeat(2, 1fr);
@@ -986,8 +990,11 @@ footer .text span a:hover{
       opacity:0;          
       pointer-events:none;
     }
+    section .main-container{
+        padding-top: 4rem;
+    }
     .main-container .content{
-        margin-top: 20px;
+        margin-top: 50px;
         width: 80%;
     }
     .social-links{
@@ -1003,9 +1010,6 @@ footer .text span a:hover{
         width: 100%;
         margin: 20px 0;
     }
-    .contact .text{
-        width: 100%;
-    }
 }
 @media (max-width: 900px) {
     .resume .left img{
@@ -1014,12 +1018,42 @@ footer .text span a:hover{
     }
 }
 @media (max-width: 672px){
+    /* contact */
+    .contact-box p{
+        font-size: 1.2rem;
+    }
+    .contact-detail i{
+        font-size: 1.9rem;
+    }
+    .contact-container{
+       display: flex;          
+       flex-direction: column;
+       align-items: stretch;    
+       gap: 2rem;
+       padding: 0 1rem;           
+       overflow-x: hidden;        
+    }
+    .contact-container .contact-box form {
+       width: 100%;
+       max-width: 400px;
+       margin: 0 auto;
+       box-sizing: border-box;
+       padding: 2rem 2rem 2rem;
+    }
     .contact-box .field-box{
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
-    .contact-box form{
-    max-width: 400px;
-    margin: 0 auto;
+    .contact-box .field-box input,
+    .contact-box .field-box textarea{
+       width: 100%;
+       max-width: 100%;
+    }
+    .contact-box h2{
+        font-size: 3.5rem;
+    }
+    .contact-box .heading{
+        font-size: 2.5rem;
     }
 }
 @media (max-width: 500px) {
@@ -1042,12 +1076,8 @@ footer .text span a:hover{
     }
 
     .contact-box form{
-        padding: 2.5rem 3rem 3.5rem;
+        max-width: 400px;
+        margin: 0 auto;
     }
-    .contact-box h2{
-        font-size: 3.5rem;
-    }
-    .contact-box .heading{
-        font-size: 2.5rem;
-    }
+
 }
