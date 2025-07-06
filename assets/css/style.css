@@ -291,7 +291,7 @@ section .main-container{
     border: 0.2rem solid rgb(11, 202, 40);
     border-radius: 50%;
     color: rgb(11, 202, 40);
-    margin: 40px 30px 15px 0;
+    margin: 40px 63px 35px 0;
     font-size: 1.5rem;
     /* transition: 0.2s linear; */
     transition: 
@@ -536,16 +536,22 @@ section .main-container{
     font-size: 1.6rem;
     color: white;
 }
-.portfolio-box .tech{
-    margin: 2rem 0;
+/* .portfolio-box .related-skills{
+    font-size: 1.2rem;
     color: rgb(11, 202, 40);
-    border-bottom: .1rem solid white;
-    padding-bottom: 2rem;
+} */
+.portfolio-box .tech{
+    margin: 3rem 0;
+    border-top: .3rem solid rgb(11, 202, 40);
+}
+.portfolio-box .tech p{
+    font-size: 1.2rem;
+    color: rgb(11, 202, 40);
 }
 .portfolio-box .github a{
     position: relative;
     display: inline-flex;
-    padding: 1.3rem;
+    padding-top: 1.2rem;
     font-size: 3rem;
     color: white;
     border-radius: 50%;
@@ -695,6 +701,7 @@ section .buttons{
     margin-top: 16px 0;
 }
 
+section .buttons a.button,
 section .buttons button{
     width:auto;               
     height:auto;
@@ -711,6 +718,7 @@ section .buttons button{
     transition: all 0.4s ease;
 }
 
+section .buttons a.button:hover,
 section .buttons button:hover{
     border-color: rgb(11, 202, 40);
     scale: 1.1;
@@ -722,7 +730,7 @@ section .buttons button:hover{
 }
 
 /* projects styling */
-.projects .project-list{
+/* .projects .project-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -764,7 +772,7 @@ section .buttons button:hover{
 .projects .project-list .project-item:hover .topic,
 .projects .project-list .project-item:hover p{
     color: white
-}
+} */
 
 /* contact styling */
 .contact-container{
