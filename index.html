@@ -20,7 +20,7 @@
       <span>Gary</span>
     </div>
     <div class="links">
-      <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#home" >Home</a></div>
+      <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#home" class="active">Home</a></div>
       <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#resume" >Resume</a></div>
       <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#portfolio">Portfolio</a></div>
       <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#contact">Contact</a></div>
@@ -66,8 +66,8 @@
       </div>
 
       <div class="social-links" >
-        <a href="https://github.com/Gary-W-211" target="_blank" rel="noopener noreferrer" class="icon"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/gary-wang-659134322" target="_blank" rel="noopener noreferrer" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/Gary-W-211" target="_blank" rel="noopener noreferrer" class="icon"><i class="fa-brands fa-github"></i><span>Github</span></a>
+        <a href="https://www.linkedin.com/in/gary-wang-659134322" target="_blank" rel="noopener noreferrer" class="icon"><i class="fa-brands fa-linkedin"></i><span>linkedin</span></a>
       </div>
       <div class="social-links" >
         
@@ -217,15 +217,15 @@ SKILLS</p>
           <div class="resume-item">
             <p class="year">Aug. 2024 - May 2025</p>
             <h3>University of California, Berkeley</h3>
-            <p class="company">Master of Engineering in Mechanical Engineering, Control of Robotic and Autonomous Systems</p>
-            <p>GPA: 3.73/4.0</p>
+            <p class="name">Master of Engineering in Mechanical Engineering, Control of Robotic and Autonomous Systems</p>
+            <p class="resume-content">GPA: 3.73/4.0</p>
           </div>
 
           <div class="resume-item">
             <p class="year">Sep. 2020 - Jun. 2024</p>
             <h3>Hohai University</h3>
-            <p class="company">Bachelor of Engineering in Robotics Engineering</p>
-            <p>GPA: 3.6/4.0</p>
+            <p class="name">Bachelor of Engineering in Robotics Engineering</p>
+            <p class="resume-content">GPA: 3.6/4.0</p>
           </div>
         </div>
       </div>
@@ -235,17 +235,17 @@ SKILLS</p>
         <div class="resume-list">
           <div class="resume-item">
             <h3>Programming & Embedded</h3>
-            <span>C, C++, Python, PLC, Assembly (MCS-51), LabVIEW, FreeRTOS</span> 
+            <p class="name">C, C++, Python, PLC, Assembly (MCS-51), LabVIEW, FreeRTOS</p> 
           </div>
 
           <div class="resume-item">
             <h3>Robotics & Simulation</h3>
-            <span>ROS, Gazebo, SLAM, OpenCV, MATLAB, SolidWorks, ANSYS, RecurDyn</span> 
+            <p class="name">ROS, Gazebo, SLAM, OpenCV, MATLAB, SolidWorks, ANSYS, RecurDyn</p> 
           </div>
 
           <div class="resume-item">
             <h3>AI, Cloud & DevOps</h3>
-            <span>PyTorch, AWS, Git</span> 
+            <p class="name">PyTorch, AWS, Git</p> 
           </div>
       </div>
     </div>
@@ -258,12 +258,15 @@ SKILLS</p>
   <div class="portfolio-container">
     <div class="portfolio-box">
       <div class="portfolio-detail active">
-        <p class="numb">01</p>
-        <h3>Real-Time Energy-Efficient UAV Path Planning</h3>
-        <p>A ROS/C++ UAV trajectory planner, which leverages lightweight Neural Network(GRU/LSTM/TCN) models to accurately predict and minimize energy consumption in real time, achieving significant energy savings.</p>
+        <div class="project-head">
+          <p class="numb">01</p>
+          <h3>Real-Time Energy-Efficient UAV Path Planning</h3>
+        </div>
+        <p class="content">A ROS/C++ UAV trajectory planner, which leverages lightweight Neural Network(GRU/LSTM/TCN) models to accurately predict and minimize energy consumption in real time, achieving significant energy savings.</p>
         <div class="tech">
           <p>ROS, C++, Python, Data Processing</p>
         </div>
+
         <div class="github">
           <a href="https://github.com/Gary-W-211/Neural-Network-for-energy-optimal-path-planning-of-UAV" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>Github Repository</span></a>
         </div>
@@ -271,9 +274,11 @@ SKILLS</p>
       </div>
 
       <div class="portfolio-detail">
-        <p class="numb">02</p>
-        <h3>Autonomous Sound-Tracking & Obstacle-Avoidance Robot</h3>
-        <p>A FreeRTOS-powered ESP32 rover that simultaneously navigates, tracks sound sources, and dodges obstacles, using a 1-D Kalman filter and ramped-PWM motor control for smooth, responsive motion and low noise.</p>
+        <div class="project-head">
+          <p class="numb">02</p>
+          <h3>Autonomous Sound-Tracking & Obstacle-Avoidance Robot</h3>
+        </div>
+        <p class="content">A FreeRTOS-powered ESP32 rover that simultaneously navigates, tracks sound sources, and dodges obstacles, using a 1-D Kalman filter and ramped-PWM motor control for smooth, responsive motion and low noise.</p>
         <div class="tech">
           <p>C, Python, LabVIEW, SolidWorks, Electrical wiring, ESP32 </p>
         </div>
@@ -283,11 +288,13 @@ SKILLS</p>
       </div>
 
       <div class="portfolio-detail">
-        <p class="numb">03</p>
-        <h3>Weighted Voronoi-Based Task Allocation</h3>
-        <p>A real-time task-allocation framework that augments traditional Voronoi diagrams with adaptive weights to optimize dynamic workload distribution. Validated in Python simulations under realistic conditions, it achieved a 57% efficiency gain over the classic Voronoi approach.</p>
+        <div class="project-head">
+          <p class="numb">03</p>
+          <h3>Weighted Voronoi-Based Task Allocation</h3>
+        </div>
+        <p class="content">A real-time task-allocation framework that augments traditional Voronoi diagrams with adaptive weights to optimize dynamic workload distribution. Validated in Python simulations under realistic conditions, it achieved a 57% efficiency gain over the classic Voronoi approach.</p>
         <div class="tech">
-          <p>Python, Task-allocation Algorithms</p>
+          <p class="numb3">Python, Task-allocation Algorithms</p>
         </div>
         <div class="github">
           <a href="https://github.com/Gary-W-211/Weighted-Voronoi-Based-Task-Allocation"><i class="fa-brands fa-github"></i><span>Github Repository</span></a>
@@ -295,18 +302,22 @@ SKILLS</p>
       </div>
 
       <div class="portfolio-detail">
-        <p class="numb">04</p>
-        <h3>Intelligent Rubik's Cube Solving Robot</h3>
-        <p>An intelligent dual-arm robotic system designed to autonomously restore a Rubik’s Cube, integrating precise stepper motor control with advanced computer vision algorithms for accurate cube state detection and real-time manipulation planning.</p>
+        <div class="project-head">
+          <p class="numb">04</p>
+          <h3>Intelligent Rubik's Cube Solving Robot</h3>
+        </div>  
+        <p class="content">An intelligent dual-arm robotic system designed to autonomously restore a Rubik’s Cube, integrating precise stepper motor control with advanced computer vision algorithms for accurate cube state detection and real-time manipulation planning.</p>
         <div class="tech">
           <p>C++, OpenCV, Assembly Language, SolidWorks, STM32</p>
         </div>
       </div>
 
       <div class="portfolio-detail">
-        <p class="numb">05</p>
-        <h3>A versatile dual-rail work vehicle</h3>
-        <p>A versatile work vehicle equipped with dual rails for flexible tool switching, capable of simultaneously mounting a laser-assisted device and a hydraulic impact hammer for efficient rock-breaking, delivering high performance and operational versatility.</p>
+        <div class="project-head">
+          <p class="numb">05</p>
+          <h3>A versatile dual-rail work vehicle</h3>
+        </div>
+        <p class="content">A versatile work vehicle equipped with dual rails for flexible tool switching, capable of simultaneously mounting a laser-assisted device and a hydraulic impact hammer for efficient rock-breaking, delivering high performance and operational versatility.</p>
         <div class="tech">
           <p>SolidWorks, CAD, ANSYS Workbench, RecurDyn</p>
         </div>

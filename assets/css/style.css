@@ -48,14 +48,31 @@ body{
 }
 
 /*navbar styling*/
+/* blur background */
+/* nav::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background: rgba(255,255,255,.22); 
+  filter: blur(18px);
+  z-index:-2;
+}
+
+nav::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.4);    
+  z-index:-1;
+} */
 nav{
+    color: black;
     width: 100%;
     height: 9vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
-    background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(12px) brightness(40%);
     box-shadow: 0 0 20px black;
     -webkit-backdrop-filter: blur(12px);
@@ -132,12 +149,22 @@ nav{
     width: 100%;
 }
 
+.nav-container .links a.active{
+    color: rgb(11, 202, 40);             
+    text-shadow: 0 0 20px rgb(11,202,40); 
+    transform: scale(1.1);
+    border-radius: 12px;
+    background: rgba(220, 220, 220, 0.08);  
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
 .nav-container .links a::after{
   content: '';
   position: absolute;
   inset: 0;                   
   border-radius: 12px;
-  background: rgba(255,255,255,.08);  
+  background: rgba(220, 220, 220, 0.08);  
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   opacity: 0;                   
@@ -213,7 +240,7 @@ nav{
 }
 
 section{
-    padding: 5rem 4.6% 2rem;
+    padding: 5.5rem 4.6% 2rem;
     width: 100%;
     /* min-height: 90vh; */
     /* scroll-margin-top: 100vh; */
@@ -226,7 +253,7 @@ section.active{
 section .main-container{
     display: flex;
     justify-content: space-around;
-    padding: 7rem 2rem 0;
+    padding: 5rem 2rem 5rem;
     align-items: center;
     gap: 5rem;
 
@@ -303,6 +330,7 @@ section .main-container{
     display: flex;
     gap: 3rem;
 }
+.portfolio-box .github a,
 .social-links .icon{
     display: inline-flex;
     justify-content: center;
@@ -322,15 +350,19 @@ section .main-container{
     color 0.3s ease;
 }
 
+.portfolio-box .github a:hover,
 .social-links .icon:hover {
   background-color: rgb(11, 202, 40);  
   transform: scale(1.1);              
   color: black;                       
-}
+} 
+
+.portfolio-box .github i,
 .social-links i {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.portfolio-box .github:hover i,
 .social-links:hover i {
   transform: scale(1.2);
 }
@@ -366,8 +398,8 @@ section .main-container{
 /* resume section styling */
 .resume-container{
     display: grid;
-    grid-template-columns: 1fr 2.2fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 5rem;
     /* align-items: start;
     padding: 0 6rem; */
 }
@@ -405,7 +437,7 @@ section .main-container{
     font-size:1.6rem;
     color: white;
     font-weight: 500;
-    margin: 0 0 1rem 2.5rem;
+    margin:  0 1rem 2.5rem;
     border-radius: .8rem;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -460,11 +492,32 @@ section .main-container{
     background: rgb(11, 202, 40);
 }
 
+.resume-list .resume-item::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: rgba(255,255,255,.22); 
+    filter: blur(18px);
+    z-index:-2;
+}
+
+.resume-list .resume-item::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,.4);   
+    border-radius:.8rem;  
+    z-index:-1;
+}
 .resume-list .resume-item{
+    /* backgroud */
+    position: relative;
+    /* overflow: hidden;    */
+    isolation: isolate;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: black;
     width: 100%;
     border: rgb(11, 202, 40) solid 0.1rem;
     border-radius: .8rem;
@@ -543,36 +596,46 @@ section .main-container{
 }
 .portfolio-box .numb{
     font-size: 8rem;
-    -webkit-text-stroke: .14rem rgb(11, 202, 40);
+    -webkit-text-stroke: .3rem rgb(11, 202, 40);
     color: transparent;
     line-height: 1;
 
 }
 .portfolio-box h3{
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: .8rem 0 2rem;
     color: white;
-    -webkit-text-stroke: .07rem rgb(11, 202, 40);
+    text-shadow: 0 0 20px rgb(11, 202, 40);
+   
 }
-.portfolio-box p{
-    font-size: 1.6rem;
+.portfolio-detail p.content{
+    font-size: 1.4rem;
     color: white;
+    margin-top: 4.5rem;
+    text-align: justify;
 }
 /* .portfolio-box .related-skills{
     font-size: 1.2rem;
     color: rgb(11, 202, 40);
 } */
-.portfolio-box .tech{
-    margin: 3rem 0;
+.portfolio-box .tech p{
+    margin-top: 4.5rem;
+    border-top: .3rem solid rgb(11, 202, 40);
+    font-size: 1.2rem;
+    color: white;
+}
+
+.portfolio-box .tech p.numb3{
+    margin-top: 2.4rem;
     border-top: .3rem solid rgb(11, 202, 40);
 }
-.portfolio-box .tech p{
-    font-size: 1.2rem;
-    color: rgb(11, 202, 40);
-}
-.portfolio-box .github a{
+
+
+
+/* .portfolio-box .github a{
     position: relative;
     display: inline-flex;
+    justify-content: flex-end;
     padding-top: 1.2rem;
     font-size: 3rem;
     color: white;
@@ -582,14 +645,15 @@ section .main-container{
 }
 .portfolio-box .github a:hover{
     color: rgb(11, 202, 40);
-}
+    scale: 1.1;
+} */
 
-.portfolio-box .github a span{
+.social-links a span{
     position: absolute;
     top: -60%;
-    left: 50%;
+    left: 120%;
     transform: translateX(-50%) scale(.9);
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     white-space: nowrap;
     padding: .5rem 1rem;
     border-radius: .6rem;
@@ -599,9 +663,25 @@ section .main-container{
     opacity: 0;
     transition: .2s ease;
 }
+.portfolio-box .github a span{
+    position: absolute;
+    top: -60%;
+    left: 150%;
+    transform: translateX(-50%) scale(.9);
+    font-size: 1.3rem;
+    white-space: nowrap;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    pointer-events: none;
+    background: white;
+    color: black;
+    opacity: 0;
+    transition: .2s ease;
+}
+.social-links a:hover span,
 .portfolio-box .github a:hover span{
     opacity: 1;
-    top: -70%;
+    top: -150%;
     scale: 1;
     transform: translateX(-50%) scale(1);
 }
@@ -809,7 +889,7 @@ section .buttons button:hover{
 }
 .contact-box h2{
     font-size: 4.5rem;
-    color: rgb(11, 202, 40);
+    color: white;
     margin-bottom: 2rem;
 }
 .contact-box p{
@@ -833,8 +913,35 @@ section .buttons button:hover{
 .contact-detail .detail p:first-child{
     color: rgb(11, 202, 40);
 }
+
+.contact-box form::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: rgba(255,255,255,.22); 
+    filter: blur(18px);
+    z-index:-2;
+}
+
+.contact-box form::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,.3);     
+    z-index:-1;
+}
+
 .contact-box form{
-    background: black; 
+    position: relative;
+    overflow: hidden;  
+    isolation: isolate;
+    /* background:
+     linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)),
+     rgba(255,255,255,.15); */
+
+    /* backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); */
+
     max-width: 750px;
     margin: 0 auto;
     padding: 1rem 2rem 1rem;
@@ -842,14 +949,16 @@ section .buttons button:hover{
     text-align: center;
 }
 .contact-box .heading{
+    color: rgb(11, 202, 40);
     font-size: 3.5rem;
+    margin-bottom: 1rem;
 }
 .contact-box .field-box{
     display: grid;
     /* grid-template-columns: repeat(2, 1fr); */
     /* grid-template-columns: repeat(auto-fit,minmax(min(240px,100%),1fr)); */
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 1rem;
 }
 .contact-box .field-box input,
 .contact-box .field-box textarea{
@@ -863,7 +972,7 @@ section .buttons button:hover{
 }
 .contact-box .field-box textarea{
     grid-column: 1 / -1;
-    height: 26rem;
+    height: 21rem;
     resize: none;
 }
 .contact-box .field-box input:focus,
@@ -920,7 +1029,9 @@ footer .text span a:hover{
     section .main-container {
         flex-direction: column;
         display:flex;
-        padding-left: 0;       
+        align-items: center;
+        justify-content: flex-start;
+        padding: 5rem 0.4rem;     
         gap: 20px;                
     }
     .main-container .image {
@@ -930,6 +1041,7 @@ footer .text span a:hover{
         overflow: hidden;
         margin: 0 auto;          
         box-shadow: 0 0 30px rgb(11,202,40);
+        align-self: center;
     }
     .main-container .image img {
         width: 100%;
@@ -938,8 +1050,9 @@ footer .text span a:hover{
         top: 0; left: 0;         
         position: static;        
     }
-    .main-container .content {
-        width: 90%;        
+    .main-container .content{
+        display: flex;
+        flex-direction: column;
     }
     /* .social-part{
         display: flex;
@@ -957,6 +1070,18 @@ footer .text span a:hover{
         width: calc(100% / 2 - 20px);
     }
     /* portfolio */
+    .project-head{
+        display:flex;
+        align-items: center;  
+        gap: 4rem;             
+    }
+    .project-head h3{
+        font-size: 2.8rem;
+    }
+    .portfolio-detail p.content{
+        margin-top: 3.5rem;
+    }
+
     /* .resume-container, */
     .contact-box .field-box,
     .portfolio-container{
@@ -982,17 +1107,22 @@ footer .text span a:hover{
     }
     .resume-box .desc{
         max-width: 730px;
-        margin: 1rem 0;
+        margin: 2rem 0 6rem;
+        font-size: 1.5rem;
+        width: 90%;
         align-self:center;
+        /* border-bottom: .3rem solid rgb(11, 202, 40); */
     }
     
     .resume-box .buttons{
+        width: 100%;
         display: flex;
         gap: 1.5rem;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
     }
     .resume-box .resume-btn{
+        margin-left: 0;
         max-width: 200px;
         font-size: 1.2rem;
         flex: 1 1 0;
@@ -1002,10 +1132,21 @@ footer .text span a:hover{
     .resume-box h2{
         font-size: 4rem;
     }
+     .resume-container > .resume-box:nth-child(2){
+        justify-self: center;
+    }
+    .resume-list{
+        width:auto;             
+        width: 90%;      
+        margin:0 auto;         
+        display:flex;
+        flex-direction:column;
+        gap:2rem;
+    }
 }
 @media (max-width: 978px) {
     section{
-        padding: 4rem 6% 4rem;
+        padding: 5rem 6% 4rem;
         scroll-margin-top: 3vh;
     }
     
@@ -1056,6 +1197,17 @@ footer .text span a:hover{
         width: 100%;
         margin: 20px 0;
     }
+    /* portfolio */
+    .project-head{
+        gap: 4rem;             
+    }
+    .project-head h3{
+        font-size: 2.5rem;
+    }
+    .portfolio-detail p.content{
+        margin-top: 3.5rem;
+    }
+
 }
 @media (max-width: 900px) {
     .resume .left img{
@@ -1121,6 +1273,14 @@ footer .text span a:hover{
     .resume-box h2{
         font-size: 3.5rem;
     }
+    .resume-box .desc{
+        font-size: 1.2rem;
+    }
+    .resume-box .buttons{
+        justify-content:center;
+        width: 80%;
+        align-self: center;
+    }
     .resume-box .resume-btn{
         height: 4rem;
         margin: 0 0.3rem;
@@ -1133,6 +1293,18 @@ footer .text span a:hover{
     .resume-box .resume-btn.active{
         flex-basis: 300px;
     }
+    /* portfolio */
+    .project-head{
+        gap: 3rem;             
+    }
+    .project-head h3{
+        font-size: 2.1rem;
+    }
+    .portfolio-detail p.content{
+        margin-top: 2.5rem;
+        font-size: 1.2rem;
+    }
+
 }
 @media (max-width: 550px) {
     .main-container .image{
@@ -1163,6 +1335,17 @@ footer .text span a:hover{
     }
     .resume-box .resume-btn.active{
         flex-basis: 150px;
+    }
+    /* portfolio */
+    .project-head{
+        gap: 1.2rem;             
+    }
+    .project-head h3{
+        font-size: 1.8rem;
+    }
+    .portfolio-detail p.content{
+        margin-top: 2rem;
+        font-size: 1.1rem;
     }
 
 }
