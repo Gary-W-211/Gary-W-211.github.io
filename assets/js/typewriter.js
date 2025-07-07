@@ -1,4 +1,4 @@
-const words = ["Robotics Engineer", "Mechanical Engineer", "Electrical Engineer"];
+const words = ["a Robotics Engineer", "a Mechanical Engineer", "an Electrical Engineer"];
 const typewriterText = document.querySelector(".typewriter-text");
 
 let wordIndex = 0;

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
 *{
     margin:0;
@@ -8,8 +9,9 @@
     scroll-behavior: smooth;
 }
 html{
+    height: 100%;
     overflow-x: hidden;
-    font-size: 90%;
+    /* font-size: 100%; */
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -19,8 +21,14 @@ body{
     height: 100%;
     background-color: black;
     overflow-x: hidden;
-    margin-top: 1vh;
+    /* margin-top: 4vh; */
+    display: flex;
+    flex-direction: column;
 }
+.site-content{
+    flex: 1;
+}
+
 
 /* Custom scroll bar css */
 ::-webkit-scrollbar {
@@ -205,28 +213,31 @@ nav{
 }
 
 section{
-    padding: 10rem 7% 2rem;
+    padding: 5rem 4.6% 2rem;
     width: 100%;
     /* min-height: 90vh; */
-    scroll-margin-top: -9vh;
+    /* scroll-margin-top: 100vh; */
+    display: none;
+}
+section.active{
+    display: block;
 }
 
 section .main-container{
     display: flex;
     justify-content: space-around;
-    padding: 0 2rem;
+    padding: 7rem 2rem 0;
     align-items: center;
     gap: 5rem;
 
 }
 .main-container .image{
-    /* width: 600px; */
-    width: min(600px, 80vw);
+    width: 500px;
     aspect-ratio: 1 / 1.1;
-    /* height: 65vh; */
     border-radius: 100%;
     overflow: hidden;
     box-shadow: 0 0 50px rgb(11, 202, 40);
+    margin:0 0 3vh 6vw;
 }
 
 .main-container .image img {
@@ -258,7 +269,7 @@ section .main-container{
 }
 
 .content h1{
-    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+    font-size: clamp(0.5rem, 0.5rem + 5vw, 3rem);
 }
 
 .content h1 span{
@@ -267,7 +278,7 @@ section .main-container{
 }
 
 .content .typewriter{
-    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-size: clamp(0rem, 0rem + 4.5vw, 2rem);
     font-weight: 600;
 }
 
@@ -277,11 +288,22 @@ section .main-container{
 }
 
 .content p{
-    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
-    margin: 10px 0;
+    font-size: clamp(0.4rem, 0.4rem + 9vw, 1.1rem);
+    margin: 15px 0;
+    text-align: justify;
 }
 
+.social-part{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+}
 .social-links{
+    display: flex;
+    gap: 3rem;
+}
+.social-links .icon{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -289,19 +311,18 @@ section .main-container{
     height: 3rem;
     background-color: transparent;
     border: 0.2rem solid rgb(11, 202, 40);
-    border-radius: 50%;
+    border-radius: 30%;
     color: rgb(11, 202, 40);
-    margin: 40px 63px 35px 0;
     font-size: 1.5rem;
     /* transition: 0.2s linear; */
+    margin: 20px 0;
     transition: 
     background-color 0.3s ease, 
     transform 0.3s ease, 
     color 0.3s ease;
-
 }
 
-.social-links:hover {
+.social-links .icon:hover {
   background-color: rgb(11, 202, 40);  
   transform: scale(1.1);              
   color: black;                       
@@ -317,11 +338,11 @@ section .main-container{
 .content .buttons{
     display: flex;
     justify-content: flex-start;
+    margin: 22px 0;
 }
 .content button{
     width: 50%;
     height: 5vh;
-    margin: 22px;
     background-color: rgb(11, 202, 40);
     color: white;
     border: none;
@@ -346,24 +367,25 @@ section .main-container{
 .resume-container{
     display: grid;
     grid-template-columns: 1fr 2.2fr;
-    gap: 5rem;
+    gap: 2rem;
     /* align-items: start;
     padding: 0 6rem; */
 }
 
 .resume-box h2{
     font-size: 4.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     color: rgb(11, 202, 40);
 }
-.reume-box p{
-    padding-left: 7rem;
+.resume-box p{
+    padding-left: rem;
 }
 .resume-box .desc{
     max-width: 100%;
-    font-size: 1.3rem;
-    margin: 1rem 1rem 3rem;
+    font-size: 1.1rem;
+    margin: 3rem 1rem 1rem 2.5rem;
     color: white;
+    text-align: justify;
 
 }
 
@@ -372,18 +394,18 @@ section .main-container{
   flex-direction: column;
   align-items: center;   
   gap: 2rem;             
-  margin-top: 4rem;     
+  margin-top: 2.5rem;     
 }
 
 .resume-box .resume-btn{
-    width: 70%;
-    height: 5rem;
+    width: 60%;
+    height: 4rem;
     background: rgb(11, 202, 40);
     border: .2rem solid rgb(11, 202, 40);
     font-size:1.6rem;
     color: white;
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin: 0 0 1rem 2.5rem;
     border-radius: .8rem;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -418,7 +440,7 @@ section .main-container{
   gap: 2rem;              
   color: white;
   overflow: auto;
-  height: 41rem;
+  height: 35rem;
 }
 
 .resume-list::-webkit-scrollbar{
@@ -856,16 +878,19 @@ section .buttons button:hover{
 
 /*footer styling*/
 footer{
-    background: rgb(11, 202, 40);
     padding: 15px 0;
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
 footer .text span{
+    display: block;
     font-size: 17px;
     font-weight: 400;
+    border-top: 0.2rem solid rgb(11, 202, 40);
+    padding-top: 0.6rem;
     color: white;
 }
+
 footer .text span a{
     color: white;
     font-weight: 500;
@@ -887,9 +912,9 @@ footer .text span a:hover{
 }
 
 @media (max-width: 1200px) {
-    /* html{
-        font-size: 50%;
-    } */
+    html{
+        font-size: 90%;
+    }
 
     /* home */
     section .main-container {
@@ -898,29 +923,33 @@ footer .text span a:hover{
         padding-left: 0;       
         gap: 20px;                
     }
-  .main-container .image {
-    width: min(600px, 80vw);             
-    aspect-ratio: 1 / 1.1;        
-    border-radius: 100%;
-    overflow: hidden;
-    margin: 0 auto;          
-    box-shadow: 0 0 30px rgb(11,202,40);
-  }
-  .main-container .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0; left: 0;         
-    position: static;        
-  }
-  .main-container .content {
-    width: 90%;               
-    /* text-align: center; */
-  }
-  .content .buttons{
-    display: flex;
-    justify-content: center;
-  }
+    .main-container .image {
+        width: 40vw;             
+        aspect-ratio: 1 / 1.1;        
+        border-radius: 100%;
+        overflow: hidden;
+        margin: 0 auto;          
+        box-shadow: 0 0 30px rgb(11,202,40);
+    }
+    .main-container .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0; left: 0;         
+        position: static;        
+    }
+    .main-container .content {
+        width: 90%;        
+    }
+    /* .social-part{
+        display: flex;
+        flex-direction: column;  
+        gap: 1.3rem;
+    } */
+    .content .buttons{
+        display: flex;
+        justify-content: center;
+    }
   
     /*projects*/
     .projects .project-list .project-item{
@@ -928,7 +957,7 @@ footer .text span a:hover{
         width: calc(100% / 2 - 20px);
     }
     /* portfolio */
-    .resume-container,
+    /* .resume-container, */
     .contact-box .field-box,
     .portfolio-container{
         grid-template-columns: 1fr;
@@ -939,12 +968,44 @@ footer .text span a:hover{
     .portfolio-container .portfolio-box:first-child{
         order:1;
     }
+    /* resume */
+    .resume-container{
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    .resume-container .resume-box{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .resume-box .desc{
+        max-width: 730px;
+        margin: 1rem 0;
+        align-self:center;
+    }
     
+    .resume-box .buttons{
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .resume-box .resume-btn{
+        max-width: 200px;
+        font-size: 1.2rem;
+        flex: 1 1 0;
+    }
 
+    .resume-box .heading,
+    .resume-box h2{
+        font-size: 4rem;
+    }
 }
 @media (max-width: 978px) {
     section{
-        padding: 4rem 7% 4rem;
+        padding: 4rem 6% 4rem;
         scroll-margin-top: 3vh;
     }
     
@@ -985,15 +1046,10 @@ footer .text span a:hover{
     }
     .main-container .content{
         margin-top: 50px;
-        width: 80%;
-    }
-    .social-links{
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
+        width: 95%;
     }
     .main-container .image{
-        width: 70%;
+        width: 50%;
         aspect-ratio: 1 / 1.1;
     }
     .projects .project-list .project-item{
@@ -1008,11 +1064,17 @@ footer .text span a:hover{
     }
 }
 @media (max-width: 672px){
-    /* .social-links{
+    html{
+        font-size: 85%;
+    }
+    .social-part{
+        flex-direction: column;
+    }
+    .social-links{
         display: flex;
         flex-direction: row;
         justify-content: center;
-    } */
+    }
     /* contact */
     .contact-box p{
         font-size: 1.2rem;
@@ -1050,23 +1112,57 @@ footer .text span a:hover{
     .contact-box .heading{
         font-size: 2.5rem;
     }
+    #resume.active    { margin-top: 2.5vh; }
+    #portfolio.active { margin-top: 1.1vh; }
+    #contact.active   { margin-top: 3vh; }
+
+    /* resume */
+    .resume-box .heading,
+    .resume-box h2{
+        font-size: 3.5rem;
+    }
+    .resume-box .resume-btn{
+        height: 4rem;
+        margin: 0 0.3rem;
+        font-size: 1.1rem;
+        flex:0 0 70px;          
+        transition: flex-basis .35s ease,
+                    background  .35s ease,
+                    color       .35s ease;
+    }
+    .resume-box .resume-btn.active{
+        flex-basis: 300px;
+    }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .main-container .image{
         width: 60vw;
         height: 60vw;
         margin-bottom: 0px;
     }
     .main-container .content{
-        width: 80%;
+        width: 95%;
     }
-    .resume button{
-        margin-top: 15px;
-    }
-
     .contact-box form{
         max-width: 400px;
         margin: 0 auto;
+    }
+    /* resume */
+    .resume-box h2,
+    .resume-box .heading{
+        font-size: 3rem;
+    }
+    .resume-box .resume-btn{
+        height: 4rem;
+        margin: 0 0rem;
+        font-size: 0.9rem;
+        flex:0 0 95px;          
+        transition: flex-basis .35s ease,
+                    background  .35s ease,
+                    color       .35s ease;
+    }
+    .resume-box .resume-btn.active{
+        flex-basis: 150px;
     }
 
 }
