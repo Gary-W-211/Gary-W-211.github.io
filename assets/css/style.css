@@ -590,6 +590,7 @@ section .main-container{
 }
 .portfolio-detail{
     display: none;
+    position:relative;
 }
 .portfolio-detail.active{
     display: block;
@@ -603,7 +604,7 @@ section .main-container{
 }
 .portfolio-box h3{
     font-size: 3rem;
-    margin: .8rem 0 2rem;
+    margin: 2rem 0 2rem;
     color: white;
     text-shadow: 0 0 20px rgb(11, 202, 40);
    
@@ -618,6 +619,7 @@ section .main-container{
     font-size: 1.2rem;
     color: rgb(11, 202, 40);
 } */
+
 .portfolio-box .tech p{
     margin-top: 4.5rem;
     border-top: .3rem solid rgb(11, 202, 40);
@@ -625,10 +627,10 @@ section .main-container{
     color: white;
 }
 
-.portfolio-box .tech p.numb3{
+/* .portfolio-box .tech p.numb3{
     margin-top: 2.4rem;
     border-top: .3rem solid rgb(11, 202, 40);
-}
+} */
 
 
 
@@ -995,7 +997,7 @@ footer .text span{
     display: block;
     font-size: 17px;
     font-weight: 400;
-    border-top: 0.2rem solid rgb(11, 202, 40);
+    /* border-top: 0.2rem solid rgb(11, 202, 40); */
     padding-top: 0.6rem;
     color: white;
 }
@@ -1295,10 +1297,12 @@ footer .text span a:hover{
     }
     /* portfolio */
     .project-head{
-        gap: 3rem;             
+        gap: 3rem;            
     }
+
     .project-head h3{
         font-size: 2.1rem;
+        margin-top: 0;
     }
     .portfolio-detail p.content{
         margin-top: 2.5rem;
@@ -1344,7 +1348,8 @@ footer .text span a:hover{
         font-size: 1.8rem;
     }
     .portfolio-detail p.content{
-        margin-top: 2rem;
+        text-align: left;
+        margin-top: 1rem;
         font-size: 1.1rem;
     }
 
