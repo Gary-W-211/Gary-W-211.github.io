@@ -431,7 +431,7 @@ section .main-container{
 }
 
 .resume-box .resume-btn{
-    width: 60%;
+    width: 50%;
     height: 4rem;
     background: rgb(11, 202, 40);
     border: .2rem solid rgb(11, 202, 40);
