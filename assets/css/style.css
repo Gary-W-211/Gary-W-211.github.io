@@ -33,6 +33,7 @@ body{
 /* Custom scroll bar css */
 ::-webkit-scrollbar {
     width: 10px;
+    z-index: 999;
 }
 ::-webkit-scrollbar-track {
     background: transparent;
@@ -67,12 +68,12 @@ nav::after{
 } */
 nav{
     color: black;
-    width: 100%;
+    width: 97%;
     height: 9vh;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 10;
     backdrop-filter: blur(12px) brightness(40%);
     box-shadow: 0 0 20px black;
     -webkit-backdrop-filter: blur(12px);
@@ -1337,8 +1338,11 @@ footer .text span a:hover{
                     background  .35s ease,
                     color       .35s ease;
     }
+    .resume-box .desc{
+        margin-bottom: 2rem;
+    }
     .resume-box .resume-btn.active{
-        flex-basis: 150px;
+        flex-basis: 130px;
     }
     /* portfolio */
     .project-head{
